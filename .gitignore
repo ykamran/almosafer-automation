@@ -1,0 +1,11 @@
+#IntelliJ Idea Project
+.idea
+
+# Logs
+logs
+*.log
+
+# Runtime data
+pids
+*.pid
+*.seed

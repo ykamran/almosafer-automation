@@ -21,9 +21,9 @@ describe("Almosafer Automation", function () {
     it("Verify Default Language of Home Page", function () {
         HomePage.elements.languageDisplayHeader().then(function (element) {
             if (element.text() == "English") {
-                HomePage.elements.languageDisplayHeader().should('have.text', this.data.defaultLangauageTextArabic)
+                HomePage.elements.languageDisplayHeader().should('have.text', this.data.defaultLanguageTextArabic)
             } else {
-                HomePage.elements.languageDisplayHeader().should('have.text', this.data.defaultLangauageTextEnglish)
+                HomePage.elements.languageDisplayHeader().should('have.text', this.data.defaultLanguageTextEnglish)
             }
 
 
@@ -39,7 +39,7 @@ describe("Almosafer Automation", function () {
 
 //verify contact numbers
     it("Verify contact numbers", function () {
-        HomePage.elements.whatsappConatctHeader().should('have.text', this.data.whatsappConatctHeader)
+        HomePage.elements.whatsappContactHeader().should('have.text', this.data.whatsappContactHeader)
         HomePage.elements.callUsFooter().should('have.text', this.data.callUs)
     })
 
@@ -123,7 +123,7 @@ describe("Almosafer Automation", function () {
 
     //Randomly select “1 room, 2 adults, 0 children” or “1 room, 1 adult, 0 children” option
     it("Randomly select option of people", function () {
-        cy.randomValue(this.data.accomodationChoicesEnglish).then(data => {
+        cy.randomValue(this.data.accommodationChoicesEnglish).then(data => {
             cy.get('select').select(data)
         })
 

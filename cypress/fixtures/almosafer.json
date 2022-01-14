@@ -1,9 +1,9 @@
 {
   "defaultLanguage": "en",
-  "defaultLangauageTextArabic": "English",
-  "defaultLangauageTextEnglish": "العربية",
+  "defaultLanguageTextArabic": "English",
+  "defaultLanguageTextEnglish": "العربية",
   "defaultCurrency": "SAR",
-  "whatsappConatctHeader": "+966 55 440 0000",
+  "whatsappContactHeader": "+966 55 440 0000",
   "callUs": "920000997",
   "color": "red",
   "id": 4,
@@ -17,7 +17,7 @@
     "دبي",
     "ج  َّدة "
   ],
-  "accomodationChoicesEnglish": [
+  "accommodationChoicesEnglish": [
     "A",
     "B"
   ],
