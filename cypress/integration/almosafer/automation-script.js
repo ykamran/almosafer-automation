@@ -32,7 +32,7 @@ describe("Almosafer Automation", function () {
 
 
 // //verify the default curreny is SAR
-    it("Verify default curreny is SAR", function () {
+    it("Verify default currency is SAR", function () {
         HomePage.elements.currencyButton().should('contain', this.data.defaultCurrency)
     })
 
@@ -72,7 +72,7 @@ describe("Almosafer Automation", function () {
 
 
 //Use random method to change language and verify if the language is as chosen
-    it("random method to change language and verify if the language is changed", function () {
+    it("Random method to change language and verify if the language is changed", function () {
         cy.randomValue(this.data.availableLanguages).then(randomLanguage => {
             HomePage.elements.languageDisplayHeader().then(function (element) {
                 if (element.text() == "English") {
@@ -138,7 +138,7 @@ describe("Almosafer Automation", function () {
 
 
 //click on lowest price
-    it("click on lowest price Filter Button", function () {
+    it("Click on lowest price Filter Button", function () {
         SearchResult.elements.lowestPriceFilterButton().click();
 
         cy.log('Search Result Elements on lowestPriceFilterButton Started.');
@@ -163,8 +163,6 @@ describe("Almosafer Automation", function () {
             cy.log('Search Result Elements on lowestPriceFilterButton Completed.');
         });
     })
-
-
 })
 
 
