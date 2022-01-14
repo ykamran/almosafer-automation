@@ -1,5 +1,5 @@
 # Almosafer Automation
-##Automation Test Coverage
+## Automation Test Coverage
 
 * Verify Default Language of Home Page
 * Verify default currency is SAR
