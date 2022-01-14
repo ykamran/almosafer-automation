@@ -1,11 +1,13 @@
 #IntelliJ Idea Project
 .idea
+.metadata
 
 # Logs
 logs
 *.log
 
 # Runtime data
+results
 pids
 *.pid
 *.seed

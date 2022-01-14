@@ -1,9 +1,12 @@
 {
-  "devDependencies": {
-    "cypress": "^9.2.1",
+  "devDependencies":
+  {
+    "cypress": "^9.1.1",
     "mochawesome": "^7.0.1"
   },
-  "dependencies": {
+
+  "dependencies":
+  {
     "cypress-iframe": "^1.0.1"
   }
 }
