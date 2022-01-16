@@ -1,3 +1,4 @@
+
 class HotelsTab {
 
     elements = {
@@ -8,6 +9,7 @@ class HotelsTab {
 
     }
     
+    inputLocation = ""
         
     clickOnSearchHotelButton(){
         this.elements.searchButton().click()
@@ -15,12 +17,21 @@ class HotelsTab {
     
     clickOnFirstAutoCompleteResult(){
         this.elements.firstAutoComplete().click()
+        this.getinputLocationValue()
     }
 
     selectAccommodationChoice(accommodationChoices) {
         cy.randomValue(accommodationChoices).then(data => {
             cy.get('select').select(data)
         })
+    }
+
+    getinputLocationValue(){
+        let hotelsTab = this;
+        cy.get('input[data-testid="AutoCompleteInput"]').invoke('val').then(data => {
+            hotelsTab.inputLocation = data.valueOf()
+            cy.log("Location That is going to be searched is " + hotelsTab.inputLocation)
+         })
     }
 }
     

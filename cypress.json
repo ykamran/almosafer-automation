@@ -1,14 +1,9 @@
 {
-    "defaultCommandTimeout":24000,
-    "pageLoadTimeout":24000,
-   
-    "env" :
-    {
-        "url" :  "https://almosafer.com/"
-
-    },
-
+    "defaultCommandTimeout":20000,
+    "pageLoadTimeout":34000,
+    "baseUrl" :  "https://almosafer.com/",
     "reporter": "mochawesome",
+
     "reporterOptions":
     {
        "reportDir": "cypress/results",

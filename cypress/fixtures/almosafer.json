@@ -1,15 +1,13 @@
 {
-    "defaultLanguage": "en",
     "defaultCurrency": "SAR",
     "whatsappContactNumber": "+966 55 440 0000",
     "callUs": "920000997",
     "color": "red",
-    "id": 4,
     "available": false,
     "englishLocations": ["duba", "jedda", "riyadh"],
     "arabicLocations": ["دبي", "ج  َّدة "],
-    "accommodationChoicesEnglish": ["A","B"],
-    "NumberOfDaysIncreaseDeparture" : "1",
-    "NumberOfDaysIncreaseArrival" : "2",
+    "accommodationChoices": ["A","B"],
+    "numberOfDaysIncreaseDeparture" : "1",
+    "numberOfDaysIncreaseArrival" : "2",
     "supportedLanguages": ["en","ar"]
 }

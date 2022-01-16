@@ -11,7 +11,12 @@
 
 // This function is called when a project is opened or re-opened (e.g. due to
 // the project's config changing)
+// import './commands'
 
+// Cypress.on('uncaught:exception', (err, runnable) => {
+//   // returning false here prevents Cypress from failing the test
+//   return false
+// })
 /**
  * @type {Cypress.PluginConfig}
  */

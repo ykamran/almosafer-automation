@@ -10,15 +10,17 @@ class HomePage{
         callUsFooter: () => cy.get('[data-testid="ContactUs__Number"]'),
         supportFooter: () => cy.get('.sc-ESoVU > strong'),
         qitafLogo: () => cy.get('[data-testid="Footer__QitafLogo"]'),
+        flightsTab: () => cy.get('#uncontrolled-tab-example-tab-flights'),
         hotelTab: ()=> cy.get('#uncontrolled-tab-example-tab-hotels'),
         fromDateCalender: ()=>  cy.get('[data-testid="FlightSearchBox__FromDateButton"] > span[class^=sc-]:nth(1)'),
         toDateCalender: ()=>  cy.get('[data-testid="FlightSearchBox__ToDateButton"] > span[class^=sc-]:nth(1)'),
         hotelsTab: ()=>  cy.get('#uncontrolled-tab-example-tab-hotels'),
-        currentLanguage: ()=> cy.get('a[data-testid="Header__LanguageSwitch"]')
+        currentLanguage: ()=> cy.get('a[data-testid="Header__LanguageSwitch"]'),
+        signInButton: ()=> cy.get('[data-testid="Header__SignInButton"]')
     }
 
     navigate(){
-        cy.visit(Cypress.env('url'));
+        cy.visit('');
     } 
 
     switchToHotelTab(){
@@ -27,7 +29,7 @@ class HomePage{
 
     verifyDefaultCurrency(defaultCurrency)
     {
-        return this.elements.currencyButton().should('contain', defaultCurrency) 
+        this.elements.currencyButton().should('contain', defaultCurrency) 
     }
 
 
@@ -35,6 +37,7 @@ class HomePage{
         this.elements.qitafLogo().should('be.visible')  
     }
     
+
 
     verifyFlightDepartureDate(NumberOfDaysIncreaseDeparture)
     {
@@ -55,18 +58,25 @@ class HomePage{
         this.elements.hotelTab().should('have.attr', 'aria-selected', 'false');
     }
 
+    verifyFlightsTabIsEnabled()
+    {
+        this.elements.flightsTab().should('have.attr', 'aria-selected', 'true');
+    }
+
     verifyDefaultLanguageIsArabic(){
-        //this.elements.languageDisplayHeader().should('have.attr', 'lang', 'en');
        this.elements.languageDisplayHeader().should('have.attr', 'lang', 'ar');
     }
 
     verifyWhatsappContact(whatsappContactNumber){
         this.elements.whatsappContactNumber().should('have.text',whatsappContactNumber)
-
     }
 
     verifyCallUsContact(callUsContact){
         this.elements.callUsFooter().should('have.text', callUsContact)
+    }
+
+    verifySignInButton(){
+        this.elements.signInButton().should("be.visible")
     }
 
     switchRandomLanguageAndVerify(listOfsupportedLanguages) {
