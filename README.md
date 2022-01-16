@@ -1,6 +1,45 @@
 # Almosafer Automation
 ## Automation Test Coverage
 
+Prerequisite
+
+* Node.js 12 or 14 and above
+* Install npm
+
+
+Installing Project
+
+* Clone repo
+* Go to project Directory
+* Run following command:
+    * npm install
+
+
+Code Structure
+
+* cypress/integration/almosafer-automation.js : Contains the test execution Script
+* cypress/support/PageObjects : Contains all pages classes and its implementation.
+* cypress/support/commands.js : Customized commands of cypress 
+* cypress/results : Contains the execution Reports
+* package.json : Contains Dependencies
+* cypress/results : Reports of execution
+* cypress/videos : Contains Videos of the execution
+* cypress/screenshots : Contains the Screenshots
+
+
+How to run the Script:
+
+    * npx cypress run --spec cypress/integration/almosafer-automation.js
+* Run the script headed 
+    * npx cypress run --headed --spec cypress/integration/almosafer-automation.js
+
+* Report will be generated at the following location :
+    * cypress/results
+
+
+Steps Of Execution
+
+* Visit URL
 * Verify Default Language of Home Page
 * Verify default curreny is SAR
 * Verify contact number
